@@ -32,6 +32,7 @@ class LightingThread(Thread):
                 if not self.queued_patterns: continue
                 self.current_pattern = self.queued_patterns.popleft()
             self.current_pattern.illuminate()
+            self.current_pattern = None
 
 
 
